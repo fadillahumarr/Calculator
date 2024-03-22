@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --color-primary: rgb(50, 166, 186);
+  --color-secondary: rgb(30, 36, 53);
+  --color-ternary: rgb(255, 255, 255);
+  --color-primary-hover: rgb(40, 138, 155);
+  --color-secondary-hover: rgb(19, 20, 26);
+}
+
+body {
+  font-family: "inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+.container {
+  background: linear-gradient(180deg, rgb(13, 12, 12), rgb(29, 27, 27));
+  padding: 50px 30px;
+  box-shadow: 0 0 15px white;
+  border-radius: 20px;
+  max-width: 350px;
+}
+
+.display-calculator {
+  font-size: 30px;
+  color: var(--color-ternary);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 100px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.display-result {
+  font-size: 50px;
+  margin: 20px;
+  height: 3px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 9px;
+}
+
+.item {
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--color-secondary);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-ternary);
+  cursor: pointer;
+}
+
+.item:hover {
+  background-color: var(--color-secondary-hover);
+}
+
+.addition {
+  grid-row: span 2;
+}
+
+.operation {
+  background-color: var(--color-primary);
+}
+
+.operation:hover {
+  background-color: var(--color-primary-hover);
+}
